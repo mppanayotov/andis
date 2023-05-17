@@ -1,0 +1,22 @@
+/* ------------------------------------------------------------ *\
+	locator 
+\* ------------------------------------------------------------ */
+
+.locator {
+	img {
+		width: 100%; 
+		display: block; 
+
+		@include breakpoint-down(mobile) {
+			display: none; 
+		}
+	}
+
+	img + img {
+		display: none; 
+
+		@include breakpoint-down(mobile) {
+			display: block; 
+		}
+	}
+}

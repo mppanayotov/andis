@@ -1,0 +1,78 @@
+/* ------------------------------------------------------------ *\
+	logo-button
+\* ------------------------------------------------------------ */
+
+.logo-button {
+	position: relative; 
+	border-radius: 100%;
+	width: 15.1vw; 
+	height: 15.1vw; 
+	flex: 0 1 auto;
+	display: block; 
+	text-align: center; 
+	font-size: 0; 
+	transition: $tsi;
+
+	@include breakpoint-down(mobile) {
+		width: 53.07vw; 
+		height: 53.07vw; 
+	}
+
+	&:before {
+		content: '';
+		position: absolute; 
+		top: 50%; 
+		left: 50%; 
+		transform: translate(-50%, -50%); 
+		width: 120%; 
+		height: 120%; 
+		border-radius: 100%;
+		background-color: #000;
+		opacity: 0; 
+		transition: $tsi;
+	}
+
+	&:hover {
+		color: #F2F0EC;
+	}
+
+	&:hover:before {
+		opacity: 1; 
+	}
+
+	svg {
+		fill: currentColor;
+	}
+
+	.logo__outer {
+		position: absolute; 
+		top: 0; 
+		left: 0; 
+		transform: rotate(0deg);
+		width: 100%; 
+		height: 100%; 
+	}
+
+	.logo__outer svg {
+		width: 100%; 
+		height: auto; 
+	}
+
+	.logo__outer.is-spinning {
+		animation: rotate-alt 8s infinite linear;
+	}
+
+	.logo__inner {
+		position: absolute; 
+		top: 51%; 
+		left: 49%; 
+		transform: translate(-50%, -50%); 
+		width: 25.2%; 
+	}
+
+	.logo__inner svg {
+		width: 100%; 
+		height: auto; 
+	}
+}
+

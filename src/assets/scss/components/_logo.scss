@@ -1,0 +1,49 @@
+/* ------------------------------------------------------------ *\
+	Logo
+\* ------------------------------------------------------------ */
+
+.logo {
+	position: relative; 
+	transform: scale(1); 
+	width: 2.67vw; 
+	height: 2.73vw; 
+	max-width: 100%; 
+	flex: 0 1 auto;
+	background-image: url(../images/svg/logo.svg); 
+	background-size: 100% 100%;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	display: block; 
+	font-size: 0; 
+	transition: $tsi;
+
+	@include breakpoint-down(mobile) {
+		width: 10.67vw; 
+		height: 10.67vw; 
+	}
+}
+
+/*  logo--text  */
+.logo--text {
+	width: 11.667vw; 
+	height: 1.934vw; 
+	background-image: url(../images/svg/logo-text.svg); 
+
+	@include breakpoint-down(mobile) {
+		width: 38.135vw; 
+		height: 6.4vw; 
+	}
+}
+
+/*  logo--text-white  */
+.logo--text-white {
+	background-image: url(../images/svg/logo-text-white.svg); 
+}
+
+.logo-small {
+	display: inline-block; 
+	background: url(../images/svg/logo-small.svg) no-repeat 0 0; 
+	width: 48px; 
+	height: 50px;
+	background-size: 100% 100%;   
+}

@@ -1,0 +1,87 @@
+/* ------------------------------------------------------------ *\
+	spotlight
+\* ------------------------------------------------------------ */
+
+.spotlight {
+	min-height: 33.33vw; 
+	background-color: #E0DEDA;
+	display: flex; 
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+
+	@include breakpoint-down(mobile) {
+		min-height: 133.55vw; 
+	}
+
+	h3 {
+		margin-bottom: 0.47vw; 
+		font-weight: 300; 
+		text-transform: none; 
+		font-size: 1.33vw; 
+		line-height: 1.36; 
+		letter-spacing: 0;
+
+		@include breakpoint-down(mobile) {
+			margin-bottom: 1.87vw; 
+			font-size: 5.33vw; 
+		}
+	}
+
+	h4 {
+		margin-bottom: 0; 
+		font-weight: 300; 
+		text-transform: none; 
+		font-size: 0.93vw;
+		line-height: 1.36; 
+		letter-spacing: 0;
+
+		@include breakpoint-down(mobile) {
+			font-size: 3.73vw;
+		}
+	}
+
+	a {
+		margin-top: 2.2vw; 
+
+		@include breakpoint-down(mobile) {
+			margin-top: 8.8vw; 
+		}
+	}
+
+	figure {
+		position: relative; 
+		margin-bottom: 1.73vw; 
+		width: 9.33vw; 
+		height: 9.33vw; 
+		border-radius: 100%;
+		background-color: #9B9B9B; 
+		overflow: hidden; 
+
+		@include breakpoint-down(mobile) {
+			margin-bottom: 6.93vw; 
+			width: 37.33vw; 
+			height: 37.33vw; 
+		}
+	}
+
+	i,
+	img {
+		position: absolute; 
+		top: 50%; 
+		left: 50%; 
+		transform: translate(-50%, -50%); 
+	}
+
+	img {
+		width: 105%; 
+		max-width: none; 
+	}
+}
+
+.spotlight--active {
+	color: #fff;
+}

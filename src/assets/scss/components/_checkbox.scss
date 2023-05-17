@@ -1,0 +1,60 @@
+/* ------------------------------------------------------------ *\
+	Checkbox
+\* ------------------------------------------------------------ */
+
+.checkbox {
+	position: relative; 
+	border: none;
+	border-radius: 0;
+	width: 100%; 
+	min-height: 1.67vw; 
+	box-shadow: none;
+	font: inherit;
+
+	@include breakpoint-down(mobile) {
+		min-height: 6.67vw; 
+	}
+
+	label {
+		padding: 0.235vw 0 0.235vw 2.47vw;
+		display: block; 
+
+		@include breakpoint-down(mobile) {
+			padding: 0.94vw 0 0.94vw 9.87vw;
+		}
+	}
+
+	label:before {
+		content: '';
+		position: absolute; 
+		left: 0; 
+		top: 0; 
+		width: 1.67vw; 
+		height: 1.67vw; 
+		border: 1px solid #bbb;
+		background-image: url(../images/svg/check.svg); 
+		background-size: 0 auto;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		color: transparent;
+		line-height: 1.67vw; 
+		text-align: center; 
+		transition: $tsi;
+
+		@include breakpoint-down(mobile) {
+			width: 6.67vw; 
+			height: 6.67vw; 
+			line-height: 6.67vw; 
+		}
+	}
+
+	input {
+		display: none; 
+	}
+
+	input:checked + label:before {
+		background-color: #000;
+		background-size: 45.2% auto;
+		border-color: transparent;
+	}
+}

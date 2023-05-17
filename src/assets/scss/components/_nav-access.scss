@@ -1,0 +1,74 @@
+/* ------------------------------------------------------------ *\
+	nav-access
+\* ------------------------------------------------------------ */
+
+.nav-access {
+
+	> ul {
+		list-style-type: none;
+	}
+
+	> ul > li {
+		flex: 0 1 auto;
+	}
+
+	> ul > li:hover > ul {
+		opacity: 1; 
+		visibility: visible; 
+		pointer-events: auto;
+		transition: transform .5s ease-out, opacity .5s ease-out, visibility .5s ease-out;
+	}
+
+	> ul > li > ul {
+		position: absolute; 
+		top: 0; 
+		right: -$shell-gutter;
+		padding: 0 1.73vw 0;
+		width: 14.134vw; 
+		background-color: #e9e6e1;
+		color: #000; 
+		text-transform: none; 
+		text-align: center; 
+		letter-spacing: 0;
+		font-size: 0.93vw; 
+		font-weight: 300; 
+		line-height: 1.4; 
+		list-style-type: none;
+		opacity: 0; 
+		visibility: hidden; 
+		pointer-events: none;
+		transition: $tsi;
+		z-index: 1; 
+	}
+
+	> ul > li > ul > li + li {
+		margin-top: 0.734vw; 
+	}
+
+	> ul > li > ul > li:last-child {
+		margin-top: 1.67vw; 
+		padding: 1vw 0 1.362vw;
+		border-top: 1px solid #bbb;
+	}
+
+	> ul > li > ul > li > a:hover {
+		opacity: .6; 
+	}
+
+	strong {
+		margin-bottom: 1.77vw; 
+		padding: 0.73vw 0 0.8033vw;
+		border-bottom: 1px solid #bbb;
+		display: block; 
+		letter-spacing: .14em;
+		line-height: 1.35; 
+		font-size: 0.6vw; 
+		font-weight: 600; 
+		text-transform: uppercase; 
+		transition: $tsi;
+	}
+
+	strong:hover {
+		color: rgba(0,0,0,0.6); 
+	}
+}

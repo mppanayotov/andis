@@ -1,0 +1,119 @@
+/* ------------------------------------------------------------ *\
+	list-bar
+\* ------------------------------------------------------------ */
+
+.list-bar {
+	margin-bottom: 4.33em; 
+	list-style-type: none;
+	text-align: left; 
+	font-size: 0.67vw; 
+	font-weight: 600; 
+	text-transform: uppercase; 
+	line-height: 1.7; 
+
+	@include breakpoint-down(mobile) {
+		margin-bottom: 16vw; 
+		font-size: 2.67vw; 
+	}
+
+	a {
+		position: relative; 
+		letter-spacing: 0.135em; 
+	}
+	
+	a:before {
+		content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: currentColor;
+    transform: scaleX(0);
+	}
+
+	a:hover:before {
+		animation: flowingUnderline 2s both infinite;
+	}
+
+	em {
+		display: block; 
+		text-transform: none; 
+		font-style: normal;
+		font-weight: 300; 
+		font-size: 0.93vw; 
+		line-height: 1.9; 
+
+		@include breakpoint-down(mobile) {
+			font-size: 3.73vw; 
+		}
+	}
+
+	em a {
+		letter-spacing: 0; 
+	}
+	
+	em a:before {
+		display: none; 
+	}
+
+	em a:hover {
+		opacity: .5; 
+	}
+
+	li {
+		position: relative; 
+	}
+
+	li:first-child {
+		margin-bottom: 2vw; 
+		padding-bottom: 0.67vw; 
+		border-bottom: 1px solid #BBB;
+		font-size: 1.07vw; 
+		line-height: 1.38; 
+		text-transform: none; 
+
+		@include breakpoint-down(mobile) {
+			margin-bottom: 8vw; 
+			padding-bottom: 2.67vw; 
+			font-size: 4.27vw; 
+		}
+	}
+
+	li + li {
+		margin-top: 1.15vw; 
+
+		@include breakpoint-down(mobile) {
+			margin-top: 4.6vw; 
+		}
+	}
+
+	li.is-active a:before {
+		opacity: 1; 
+		visibility: visible; 
+    transform: scaleX(1);
+		animation: none;
+	}
+}
+
+/*  list-bar--alt  */
+.list-bar--alt {
+	position: relative; 
+
+	&:before {
+		@include breakpoint-down(mobile) {
+			content: '';
+			position: absolute; 
+			top: 1.23vw; 
+			right: 0; 
+			transform: rotate(-90deg); 
+			width: 2.93vw; 
+			height: 2.93vw; 
+			background-image: url(../images/svg/chevron.svg); 
+			background-size: 100% 100%;
+			background-position: 50% 50%;
+			background-repeat: no-repeat;
+			transition: $tsi;
+		}
+	}
+}

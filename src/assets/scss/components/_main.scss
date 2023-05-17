@@ -1,0 +1,35 @@
+/* ------------------------------------------------------------ *\
+	main
+\* ------------------------------------------------------------ */
+
+.main {
+	position: relative; 
+	padding-top: $header-height; 
+
+	@include breakpoint-down(mobile) {
+		padding-top: $header-height-sm; 
+	}
+
+	.main__breadcrumbs {
+		padding-top: 1.33vw; 
+		padding-bottom: 1.67vw; 
+
+		@include breakpoint-down(mobile) {
+			padding-top: 0; 
+			padding-bottom: 6.67vw; 
+		}
+	}
+
+	.main__breadcrumbs ul {
+		position: static; 
+	}
+}
+
+/*  main--alt  */
+.main--alt {
+	padding-top: 3.33vw; 
+
+	@include breakpoint-down(mobile) {
+		padding-top: 13.33vw; 
+	}
+}

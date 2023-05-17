@@ -1,0 +1,220 @@
+/* ------------------------------------------------------------ *\
+	nav-utilities
+\* ------------------------------------------------------------ */
+
+.nav-utilities {
+	position: relative; 
+	padding-bottom: 0.4vw; 
+	z-index: 1; 
+
+	@include breakpoint-down(mobile) {
+		padding-bottom: 0; 
+	}
+
+	> ul {
+		display: flex; 
+		justify-content: flex-end;
+		list-style-type: none;
+		align-items: flex-end;
+
+		@include breakpoint-down(mobile) {
+			align-items: center;
+		}
+	}
+
+	> ul > li {
+		flex: 0 1 auto;
+		transition: $tsi;
+	}
+
+	> ul > li:last-child {
+		position: absolute;
+    top: -1000vh;
+    left: -1000vw;
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+
+		@include breakpoint-down(mobile) {
+			position: relative; 
+	    top: 0;
+			left: 0;
+			width: 7.2vw; 
+			align-self: normal;
+			display: flex; 
+			opacity: 1;
+	    pointer-events: auto;
+	    visibility: visible;
+			z-index: 1; 
+		}
+	}
+
+	> ul > li:last-child > a {
+		position: relative; 
+		top: 50%; 
+		transform: translateY(-50%); 
+	}
+		
+	> ul > li + li {
+		margin-left: 1.67vw; 
+
+		@include breakpoint-down(mobile) {
+			margin-left: 5.33vw; 
+		}
+	}
+
+	> ul > li > a {
+		display: block; 
+	}
+	
+	> ul > li > a:hover {
+		opacity: .5; 
+
+		@include breakpoint-down(mobile) {
+			opacity: 1; 
+		}
+	}
+
+	> ul > li > a > i {
+		display: block; 
+	}
+
+	> ul > li.is-active > .nav__search,
+	> ul > li.is-active > .nav__cart {
+		opacity: 1; 
+		visibility: visible; 
+		pointer-events: auto;
+	}
+
+	> ul > li.is-active > .nav__cart {
+		transform: translateX(0); 
+	}
+
+	> ul > li.is-active > .nav__search:before,
+	> ul > li.is-active > .nav__search:after,
+	> ul > li.is-active > .nav__cart:before,
+	> ul > li.is-active > .nav__cart:after {
+		opacity: 1; 
+		visibility: visible; 
+	}
+
+	.nav__search {
+		position: absolute; 
+		top: 100%; 
+		right: -$shell-gutter;
+		padding: 4.7vw $shell-gutter 2vw;
+		width: 100vw; 
+		min-height: 15.1vw; 
+		max-height: 15.1vw; 
+		background-color: #e9e6e1;
+		opacity: 0; 
+		visibility: hidden; 
+		pointer-events: none;
+		overflow: visible !important; 
+		transition: max-height .6s ease-out, opacity .3s ease-out, visibility .3s ease-out;
+
+		@include breakpoint-down(mobile) {
+			right: -$header-shell-gutter-sm;
+			padding: 6.13vw $shell-gutter-sm; 
+			height: calc(100vh - 13.83vw);
+			max-height: 35.47vw; 
+		}
+	}
+
+	.nav__search.is-populated {
+		max-height: 50.2vw; 
+
+		@include breakpoint-down(mobile) {
+			max-height: calc(100vh - 13.83vw);
+		}
+	}
+
+	.nav__search.is-populated .nav__results {
+		opacity: 1; 
+		pointer-events: auto;
+		visibility: visible; 
+		transition: opacity .3s .3s ease-out, visibility .3s .3s ease-out;
+	}
+
+	.nav__search:before {
+		content: '';
+		position: absolute; 
+		left: -100vw; 
+		top: 100%; 
+		bottom: -100vh; 
+		right: -100vw; 
+		background-color: rgba(0,0,0,.15);
+		opacity: 0; 
+		visibility: hidden; 
+		transition: $tsi;
+	}
+
+	.nav__search:after {
+		content: '';
+		position: absolute; 
+		left: 0; 
+		top: -100vh; 
+		bottom: 100%; 
+		width: 100%; 
+		background-color: #e9e6e1;
+		opacity: 0; 
+		visibility: hidden; 
+		transition: $tsi;
+		display: none; 
+
+		@include breakpoint-down(mobile) {
+			display: block; 
+		}
+	}
+
+	.nav__cart {
+		position: absolute; 
+		top: 100%; 
+		right: -$shell-gutter; 
+		transform: translateX(10vw); 
+		padding: 0 3.33vw 3.33vw; 
+		width: 38vw; 
+		min-height: 90vh; 
+		display: flex; 
+		opacity: 0; 
+		pointer-events: none;
+		visibility: hidden; 
+		transition: $tsi;
+		z-index: 1; 
+
+		@include breakpoint-down(mobile) {
+			top: 1.2vw; 
+			right: -$header-shell-gutter-sm; 
+			padding: 0vw 8vw 20vw 8vw;
+			width: 83.73vw; 
+			min-height: 95vh; 
+		}
+	}
+
+	.nav__cart:before {
+		content: '';
+		position: absolute; 
+		left: -100vw; 
+		top: -100vh; 
+		bottom: -100vh; 
+		right: 100%; 
+		background-color: rgba(0,0,0,.15);
+		opacity: 0; 
+		visibility: hidden; 
+		transition: $tsi;
+	}
+
+	.nav__cart:after {
+		content: '';
+		position: absolute; 
+		left: 0; 
+		top: -100vh; 
+		bottom: -100vh; 
+		width: 100%; 
+		background-color: #e9e6e1;
+		opacity: 0; 
+		visibility: hidden; 
+		transition: $tsi;
+	}
+}

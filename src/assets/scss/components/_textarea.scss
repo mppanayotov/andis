@@ -1,0 +1,30 @@
+/* ------------------------------------------------------------ *\
+	textarea
+\* ------------------------------------------------------------ */
+
+.textarea {
+	padding: 1.37vw 1.67vw; 
+	width: 100%; 
+	height: 13.33vw; 
+	border: none;
+	border-radius: 0;
+	background: none; 
+	box-shadow: 0 0 0 1px #bbb inset;
+	appearance: none;
+	text-transform: none; 
+	font-weight: 300; 
+	font-size: 0.93vw; 
+	letter-spacing: 0;
+	resize: none;
+	transition: $tsi;
+
+	@include breakpoint-down(mobile) {
+		padding: 5.48vw 6.67vw; 
+		height: 80vw; 
+		font-size: 3.73vw; 
+	}
+
+	&:focus {
+		box-shadow: 0 0 0 1px #000 inset;
+	}
+}

@@ -1,0 +1,50 @@
+/* ------------------------------------------------------------ *\
+	field-quantity
+\* ------------------------------------------------------------ */
+
+.field-quantity {
+	padding: 0.73vw 1.33vw 0.67vw; 
+	width: 4.06vw; 
+	border: none;
+	border-radius: 0;
+	background: none; 
+	appearance: none;
+	box-shadow: 0 0 0 1px #bbb inset;
+	text-transform: none; 
+	text-align: center; 
+	font-weight: 600; 
+	font-size: 0.67vw; 
+	line-height: 1.4; 
+	letter-spacing: .091em;
+	transition: $tsi;
+
+	@include breakpoint-down(mobile) {
+		padding: 2.93vw 5.33vw 2.67vw; 
+		width: 16.23vw; 
+		font-size: 2.67vw; 
+	}
+
+	&::-webkit-inner-spin-button,
+	&::-webkit-outer-spin-button {
+    margin: 0;
+		display: none; 
+    -webkit-appearance: none;
+	}
+
+	&[type="number"]{
+		-moz-appearance:textfield;
+	}
+
+	&:focus {
+		box-shadow: 0 0 0 1px #000 inset;
+	}
+}
+
+/*  field-quantity--alt  */
+.field-quantity--alt {
+	font-size: 0.8vw; 
+
+	@include breakpoint-down(mobile) {
+		font-size: 3.2vw; 
+	}
+}

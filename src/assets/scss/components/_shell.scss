@@ -1,0 +1,44 @@
+/* ------------------------------------------------------------ *\
+  Shell
+\* ------------------------------------------------------------ */
+
+.shell {
+	margin-left: auto;
+	margin-right: auto; 
+	padding-left: $shell-gutter;
+	padding-right: $shell-gutter;
+	width: 100%;
+	max-width: none;
+
+	@include breakpoint-down(mobile) {
+		padding-left: $shell-gutter-sm;
+		padding-right: $shell-gutter-sm;
+	}
+}
+
+/*  shell--lg  */
+.shell--lg {
+	max-width: calc( #{$shell-lg-max-width} + #{$shell-gutter} * 2 );
+
+	@include breakpoint-down(mobile) {
+		max-width: none; 
+	}
+}
+
+/*  shell--md  */
+.shell--md {
+	max-width: calc( #{$shell-md-max-width} + #{$shell-gutter} * 2 );
+
+	@include breakpoint-down(mobile) {
+		max-width: none; 
+	}
+}
+
+/*  shell--sm  */
+.shell--sm {
+	max-width: calc( #{$shell-sm-max-width} + #{$shell-gutter} * 2 );
+
+	@include breakpoint-down(mobile) {
+		max-width: none; 
+	}
+}

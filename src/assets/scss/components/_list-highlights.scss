@@ -1,0 +1,50 @@
+/* ------------------------------------------------------------ *\
+	list-highlights
+\* ------------------------------------------------------------ */
+
+.list-highlights {
+	padding-top: 0.67vw; 
+	list-style-type: none;
+	font-size: 1.07vw; 
+	line-height: 1.65;  
+
+	@include breakpoint-down(mobile) {
+		padding-top: 2.67vw; 
+		font-size: 4.27vw; 
+	}
+
+	i {
+		position: absolute; 
+		top: 50%; 
+		left: 0; 
+		transform: translateY(-50%); 
+
+		@include breakpoint-down(mobile) {
+			position: static; 
+			transform: none;
+			margin: 0 auto 4.16vw; 
+			display: block; 
+		}
+	}
+
+	li {
+		position: relative; 
+		padding-left: 3.73vw; 
+		height: 2.4vw; 
+		line-height: 2.4vw; 
+
+		@include breakpoint-down(mobile) {
+			padding-left: 0; 
+			height: auto; 
+			line-height: 1.65;  
+		}
+	}
+
+	li + li {
+		margin-top: 1.867vw; 
+
+		@include breakpoint-down(mobile) {
+			margin-top: 4.03vw; 
+		}
+	}
+}

@@ -1,0 +1,149 @@
+/* ------------------------------------------------------------ *\
+	form-search
+\* ------------------------------------------------------------ */
+
+.form-search {
+	position: relative; 
+	margin-left: auto; 
+	margin-right: auto; 
+	width: 100%; 
+	max-width: 55.8vw; 
+	color: #000; 
+
+	@include breakpoint-down(mobile) {
+		max-width: none; 
+	}
+
+	.form__btn {
+		position: absolute; 
+		top: 0; 
+		left: 0; 
+		width: 1.17vw; 
+		height: 100%; 
+		background-image: url(../images/svg/ico-search.svg);
+		background-size: 100% auto;
+		background-position: 50% 50%;
+		background-repeat: no-repeat; 
+
+		@include breakpoint-down(mobile) {
+			width: 4.67vw; 
+			background-position: 50% 1vw;
+		}
+	}
+
+	.form__btn:hover {
+		opacity: .5; 
+	}
+
+	.form__close {
+		position: absolute; 
+		top: 0; 
+		right: 0.4vw; 
+		width: 0.85vw; 
+		height: 100%; 
+		background-image: url(../images/svg/cross.svg);
+		background-size: 100% auto;
+		background-position: 50% 50%;
+		background-repeat: no-repeat; 
+		transition: $tsi;
+
+		@include breakpoint-down(mobile) {
+			display: none; 
+		}
+	}
+
+	.form__close:hover {
+		opacity: .5; 
+	}
+
+	.form__field {
+		padding: 0.53vw 3.2vw;
+		box-shadow: 0 -1px 0 #bbb inset;
+		text-transform: none; 
+		font-weight: 300; 
+		font-size: 0.93vw; 
+		letter-spacing: 0;
+		transition: $tsi;
+
+		@include breakpoint-down(mobile) {
+			padding: 1.87vw 0 4vw 9.87vw; 
+			letter-spacing: .091em;
+			font-size: 2.67vw; 
+			line-height: 1.4; 
+		}
+	}
+
+	.form__field::placeholder {
+		@include breakpoint-down(mobile) {
+			text-transform: uppercase; 
+		}
+	}
+
+	.form__field:focus {
+		box-shadow: 0 -1px 0 #000 inset;
+	}
+}
+
+/*  form-search--alt  */
+.form-search--alt {
+	.form__field,
+	.form__field:focus {
+		box-shadow: none; 
+	}
+}
+
+/* ------------------------------------------------------------ *\
+	Form Search Alt
+\* ------------------------------------------------------------ */
+
+.form-search-alt {
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #bbb;
+	padding: 7px 0;
+	position: relative; 
+
+	.form__ico {
+		position: absolute; 
+		top: 50%; 
+		left: 0; 
+		transform: translateY(-50%); 
+		pointer-events: none;
+	}
+
+	.form__field {
+		height: 55px; 
+		border: none;
+		background: none;
+		color: #000;  
+		box-shadow: none;
+		padding: 0 85px 0 43px; 
+
+		&::-webkit-input-placeholder {
+			opacity: 1; 
+			color: #888; 
+		}
+		&::-moz-placeholder {
+			opacity: 1; 
+			color: #888; 
+		}
+		&:-moz-placeholder {
+			opacity: 1; 
+			color: #888; 
+		}
+		&:-ms-input-placeholder {
+			opacity: 1; 
+			color: #888; 
+		}
+	}
+
+	.btn {
+		min-width: 70px; 
+		height: 55px; 
+		padding: 0;
+		position: absolute; 
+		top: 50%; 
+		right: 4px; 
+		transform: translateY(-50%);
+	}
+
+}

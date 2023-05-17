@@ -1,0 +1,134 @@
+/* ------------------------------------------------------------ *\
+	banner
+\* ------------------------------------------------------------ */
+
+.banner {
+	position: relative; 
+	padding: 2.6vw 3vw 2.67vw; 
+	background-color: #000; 
+	color: #ECE9E5; 
+
+	@include breakpoint-down(mobile) {
+		padding: 10.4vw 12vw 46.67vw; 
+	}
+
+	h2 {
+		position: relative; 
+		margin-bottom: 1.87vw; 
+		font-size: 3.33vw; 
+		line-height: 0.9; 
+
+		@include breakpoint-down(mobile) {
+			margin-bottom: 7.47vw; 
+			font-size: 12.33vw; 
+		}
+	}
+
+	a {
+		position: relative; 
+	}
+
+	.banner__image {
+		position: absolute; 
+		top: 0; 
+		left: 0; 
+		width: 100%;
+		height: 100%; 
+		background-size: cover;
+		background-color: #000; 
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		pointer-events: none;
+
+		@include breakpoint-down(mobile) {
+			top: auto;
+			bottom: 0; 
+			height: 46.67vw; 
+			background-position: 50% 0%;
+			display: none; 
+		}
+	}
+
+	.banner__image + .banner__image {
+		display: none; 
+
+		@include breakpoint-down(mobile) {
+			display: block; 
+		}
+	}
+
+	.banner__close {
+		position: absolute; 
+		top: 0; 
+		right: 0; 
+		width: 2.33vw; 
+		height: 2.33vw; 
+		font-size: 0; 
+		background-color: rgba(255,255,255,0.3); 
+		color: #fff; 
+
+		@include breakpoint-down(mobile) {
+			width: 9.33vw; 
+			height: 9.33vw; 
+		}
+	}
+
+	.banner__close:hover {
+		color: #000; 
+	}
+
+	.banner__close svg {
+		position: absolute; 
+		top: 50%; 
+		left: 50%; 
+		transform: translate(-50%, -50%); 
+		width: 50%;
+		height: auto; 
+		fill: currentColor;
+	}
+}
+
+/*  banner--alt  */
+.banner--alt {
+	padding-top: 0.83vw; 
+	padding-bottom: 0.77vw; 
+	text-align: center; 
+	letter-spacing: .081em; 
+
+	@include breakpoint-down(mobile) {
+		padding-top: 3.03vw;
+		padding-bottom: 2.83vw;
+	}
+
+	p {
+		margin-bottom: 0; 
+		text-transform: uppercase; 
+		font-weight: 600; 
+		font-size: 0.6vw; 
+		line-height: 1.35; 
+
+		@include breakpoint-down(mobile) {
+			font-size: 2.67vw; 
+		}
+	}
+
+	p a {
+		position: relative; 
+		display: inline-block; 
+	}
+	
+	p a:before {
+		content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: currentColor;
+    transform: scaleX(1);
+	}
+
+	p a:hover:before {
+		animation: flowingUnderlineAlt 2s both infinite;
+	}
+}

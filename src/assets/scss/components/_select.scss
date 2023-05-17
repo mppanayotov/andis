@@ -1,0 +1,80 @@
+/* ------------------------------------------------------------ *\
+	select
+\* ------------------------------------------------------------ */
+
+.select {
+	position: relative; 
+	width: 100%; 
+	border: none;
+	border-radius: 0;
+	background: none; 
+	box-shadow: 0 0 0 1px #bbb inset;
+	appearance: none;
+	text-transform: none; 
+	font-weight: 300; 
+	font-size: 0.93vw; 
+	letter-spacing: 0;
+	color:#666666;
+	transition: $tsi;
+
+	@include breakpoint-down(mobile) {
+		font-size: 3.73vw; 
+	}
+
+	&:before {
+		content: '';
+		position: absolute; 
+		top: 50%; 
+		right: 1.67vw; 
+		transform: translate(-50%, -50%) rotate(-90deg); 
+		width: 0.38vw; 
+		height: 0.66vw; 
+		background-image: url(../images/svg/chevron.svg); 
+		background-size: 100% auto;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		pointer-events: none;
+
+		@include breakpoint-down(mobile) {
+			right: 5.33vw; 
+			width: 2.93vw; 
+			height: 2.93vw; 
+			background-size: 100% 100%;
+		}
+	}
+
+	select {
+		padding: 1.37vw 1.67vw; 
+		border: none;
+		width: 100%; 
+		background: none; 
+		appearance: none;
+
+		@include breakpoint-down(mobile) {
+			padding: 5.48vw 6.67vw; 
+		}
+	}
+}
+
+/*  select--sort  */
+.select--sort {
+	box-shadow: none;
+	border-left: 1px solid #bbb;
+
+	@include breakpoint-down(mobile) {
+		font-size: inherit;
+		border-left: none;
+	}
+
+	&:before {
+		right: 0; 
+	}
+
+	select {
+		padding: 0.5256vw 1.67vw; 
+
+		@include breakpoint-down(mobile) {
+			padding: 1.87vw 6.67vw 1.87vw 3.67vw;
+		}
+	}
+}

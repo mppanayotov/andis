@@ -1,0 +1,28 @@
+/* ------------------------------------------------------------ *\
+	link-arrow
+\* ------------------------------------------------------------ */
+
+.link-arrow {
+	position: relative; 
+	padding-right: 1.2vw; 
+	transform-style: preserve-3d;
+
+	&:before {
+		content: '';
+		position: absolute; 
+		top: 0; 
+		right: 0; 
+		width: 0.53vw; 
+		height: 100%; 
+		transform: translateX(0); 
+		background-image: url(../images/svg/arrow.svg); 
+		background-size: 100% auto;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		transition: $tsi;
+	}
+
+	&:hover:before {
+		transform: translateX(50%); 
+	}
+}

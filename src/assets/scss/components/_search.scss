@@ -1,0 +1,125 @@
+/* ------------------------------------------------------------ *\
+	search
+\* ------------------------------------------------------------ */
+
+.search {
+	@include breakpoint-down(mobile) {
+		position: absolute; 
+		top: 6.13vw; 
+		bottom: 6.13vw; 
+		left: $shell-gutter-sm; 
+		right: $shell-gutter-sm; 
+		overflow-y: auto; 
+	}
+
+	h3 {
+		margin-bottom: 1.33vw; 
+		width: 100%; 
+		flex: 0 1 auto;
+		font-size: 0.93vw; 
+		font-weight: 600; 
+		text-transform: none; 
+		letter-spacing: 0.005em; 
+		line-height: 1.37; 
+
+		@include breakpoint-down(mobile) {
+			margin-bottom: 5.33vw; 
+			font-size: 3.73vw; 
+		}
+	}
+
+	.search__results {
+		position: relative; 
+		margin-left: auto; 
+		margin-right: auto; 
+		padding-top: 3.33vw; 
+		padding-bottom: 4vw; 
+		width: 100%; 
+		max-width: 55.8vw; 
+		opacity: 0; 
+		pointer-events: none;
+		visibility: hidden; 
+		transition: $tsi;
+
+		@include breakpoint-down(mobile) {
+			padding-top: 13.33vw; 
+			padding-bottom: 100px; 
+			max-width: none; 
+		}
+	}
+
+	.search__row {
+		width: 100%; 
+		flex: 0 1 auto;
+		display: flex; 
+		justify-content: space-between;
+
+		@include breakpoint-down(mobile) {
+			display: block; 
+		}
+	}
+
+	.search__col {
+		width: 100%; 
+		max-width: 34vw; 
+		flex: 0 1 auto;
+		display: flex; 
+		flex-direction: column;
+
+		@include breakpoint-down(mobile) {
+			max-width: none; 
+		}
+	}
+
+	.search__items {
+		width: 100%; 
+		flex: 0 1 auto;
+		display: flex; 
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+
+	.search__col + .search__col {
+		padding-left: 2.67vw; 
+		max-width: 19.53vw; 
+		border-left: 1px solid #bbbbbb;
+
+		@include breakpoint-down(mobile) {
+			margin-top: 8vw; 
+			padding-top: 8vw; 
+			padding-left: 0; 
+			border-top: 1px solid #bbbbbb;
+			border-left: none;
+			max-width: none; 
+		}
+	}
+
+	.search__link {
+		position: relative; 
+		display: inline-block; 
+		text-transform: uppercase; 
+		font-size: 0.6vw; 
+		font-weight: 600; 
+		text-decoration: underline; 
+
+		@include breakpoint-down(mobile) {
+			font-size: 2.4vw; 
+		}
+	}
+
+	.search__link:hover {
+		text-decoration: none; 
+	}
+
+	.search__actions {
+		margin-top: auto; 
+		padding-top: 1.33vw; 
+		width: 100%; 
+		flex: 0 1 auto;
+
+		@include breakpoint-down(mobile) {
+			padding-top: 5.33vw; 
+		}
+	}
+}

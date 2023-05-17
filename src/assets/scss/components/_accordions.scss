@@ -1,0 +1,32 @@
+/* ------------------------------------------------------------ *\
+	accordions
+\* ------------------------------------------------------------ */
+
+.accordions {
+	.accordion {
+		border-bottom-color: #bbb;
+	}
+}
+
+/*  accordions--alt  */
+.accordions--alt {
+	@include breakpoint-down(mobile) {
+		.accordion:last-of-type {
+			border-bottom-color: transparent;
+		}
+	}
+}
+
+/*  accordions--filter  */
+.accordions--filter {
+	@include breakpoint-down(mobile) {
+		padding-bottom: 8vw; 
+		flex: 1 1 auto;
+	}
+
+	.accordion:first-of-type {
+		@include breakpoint-down(mobile) {
+			border-top-color: #bbb;
+		}
+	}
+}

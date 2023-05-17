@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+	<include src="head.html"></include>
+<body>
+	<div class="wrapper js-wrapper">
+		<include src="header.html"></include>
+		
+		<div class="wrapper-inner">
+			<div class="main">
+				<include src="hero-poster-1.html"></include>
+
+				<div class="section form-organize">
+					<form action="?" method="post">
+						<div class="shell">
+							<div class="section__breadcrumbs visible-xs-block">
+								<ul class="list-breadcrumbs">
+									<li>
+										<a href="#">barber/stylist</a>
+									</li>
+								
+									<li>
+										<a href="#">clippers</a> 
+									</li>
+								</ul><!-- /.list-breadcrumbs -->
+							</div><!-- /.section__breadcrumbs -->
+						
+							<h2 class="section__title visible-xs-block">Clippers</h2>
+						
+							<ul class="list-categories hidden-xs">
+								<li class="is-active">
+									<a href="#">All</a>
+								</li>
+								
+								<li>
+									<a href="#">Clippers</a>
+								</li>
+								
+								<li>
+									<a href="#">Trimmers &amp; Shavers</a>
+								</li> 
+								
+								<li>
+									<a href="#">Blades</a>
+								</li>
+								
+								<li>
+									<a href="#">Attachment Combs</a>
+								</li>
+								
+								<li>
+									<a href="#">Grooming Tools</a>
+								</li>
+								
+								<li>
+									<a href="#">Category</a>
+								</li>
+								
+								<li>
+									<a href="#">Category</a>
+								</li>
+								
+								<li>
+									<a href="#">Category</a>
+								</li>
+								
+								<li>
+									<a href="#">Category</a>
+								</li>
+							</ul><!-- /.list-categories -->
+						
+							<div class="organize">
+								<ul>
+									<li class="organize__filter">
+										<span class="organize__trigger js-filters-trigger">Filter By:</span>
+						
+										<div class="organize__filters js-filters">
+											<h4>Filter By:</h4>
+
+											<a href="#" class="btn-bars organize__close is-active js-filters-close">
+												<span class="btn__icon"><span></span><span></span></span>
+											</a>
+
+											<div class="accordions accordions--filter">
+												<div class="accordion accordion--checkboxes js-accordion js-accordion-alt">
+													<ul>
+														<li>
+															<strong class="js-accordion-trigger">power type</strong>
+												
+															<ul class="js-accordion-expand">
+																<li>
+																	<div class="checkbox form__checkbox">
+																		<input type="checkbox" id="check-power-1">
+
+																		<label for="check-power-1">Corded</label>
+																	</div><!-- /.checkbox -->
+																</li>
+
+																<li>
+																	<div class="checkbox form__checkbox">
+																		<input type="checkbox" id="check-power-2">
+
+																		<label for="check-power-2">Cordless</label>
+																	</div><!-- /.checkbox -->
+																</li>
+															</ul>
+														</li>
+													</ul>
+												</div><!-- /.accordion -->
+												
+												<div class="accordion accordion--checkboxes js-accordion js-accordion-alt">
+													<ul>
+														<li>
+															<strong class="js-accordion-trigger">blade type</strong>
+												
+															<ul class="js-accordion-expand">
+																<li>
+																	<div class="checkbox form__checkbox">
+																		<input type="checkbox" id="check-blade-1">
+
+																		<label for="check-blade-1">Corded</label>
+																	</div><!-- /.checkbox -->
+																</li>
+
+																<li>
+																	<div class="checkbox form__checkbox">
+																		<input type="checkbox" id="check-blade-2">
+
+																		<label for="check-blade-2">Cordless</label>
+																	</div><!-- /.checkbox -->
+																</li>
+															</ul>
+														</li>
+													</ul>
+												</div><!-- /.accordion -->
+												
+												<div class="accordion accordion--checkboxes js-accordion js-accordion-alt">
+													<ul>
+														<li>
+															<strong class="js-accordion-trigger">Motor type</strong>
+												
+															<ul class="js-accordion-expand">
+																<li>
+																	<div class="checkbox form__checkbox">
+																		<input type="checkbox" id="check-Motor-1">
+
+																		<label for="check-Motor-1">Corded</label>
+																	</div><!-- /.checkbox -->
+																</li>
+
+																<li>
+																	<div class="checkbox form__checkbox">
+																		<input type="checkbox" id="check-Motor-2">
+
+																		<label for="check-Motor-2">Cordless</label>
+																	</div><!-- /.checkbox -->
+																</li>
+															</ul>
+														</li>
+													</ul>
+												</div><!-- /.accordion -->
+												
+												<div class="accordion accordion--checkboxes js-accordion js-accordion-alt">
+													<ul>
+														<li>
+															<strong class="js-accordion-trigger">Best for hair type</strong>
+												
+															<ul class="js-accordion-expand">
+																<li>
+																	<div class="checkbox form__checkbox">
+																		<input type="checkbox" id="check-hair-1">
+
+																		<label for="check-hair-1">Corded</label>
+																	</div><!-- /.checkbox -->
+																</li>
+
+																<li>
+																	<div class="checkbox form__checkbox">
+																		<input type="checkbox" id="check-hair-2">
+
+																		<label for="check-hair-2">Cordless</label>
+																	</div><!-- /.checkbox -->
+																</li>
+															</ul>
+														</li>
+													</ul>
+												</div><!-- /.accordion -->
+											</div><!-- /.accordions -->
+
+											<a href="#" class="btn btn--sm organize__btn js-filters-close">apply filter</a>
+										</div><!-- /.organize__filters -->
+									</li>
+									
+									<li class="organize__results">Showing (23) Results</li>
+									
+									<li class="orgranize__sort">
+										Sort By:
+
+										<div class="organize__select">
+											<div class="select select--sort">
+												<select id="select-sort">
+													<option value="01" disabled selected></option>
+													<option value="02">Option 02</option>
+													<option value="03">Option 03</option>
+												</select>
+											</div><!-- /.select -->
+										</div><!-- /.organize__select -->
+									</li>
+								</ul>
+							</div><!-- /.organize -->
+						
+							<div class="section__grid">
+								<include src="grid-products-1.html"></include>
+							</div><!-- /.section__grid -->
+						</div><!-- /.shell -->
+					</form>
+				</div><!-- /.section -->
+			</div><!-- /.main -->
+
+			<include src="footer.html"></include>
+		</div><!-- /.wrapper-inner -->
+
+		<div class="transition-overlay"></div><!-- /.transition-overlay -->
+
+		<div class="widget-load">
+			<i class="logo-small"></i>
+		</div><!-- /.widget-load -->
+	</div><!-- /.wrapper -->
+
+	<include src="scripts.html"></include>
+</body>
+</html>

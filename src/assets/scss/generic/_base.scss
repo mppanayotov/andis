@@ -1,0 +1,175 @@
+/* ------------------------------------------------------------ *\
+	Base
+\* ------------------------------------------------------------ */
+
+body {
+	min-width: 320px;
+	background: #e9e6e1;
+	font-family: $ff-nun;
+	font-weight: $font-weight-base;
+	font-size: $font-size-base;
+	line-height: $line-height-base;
+	color: #000;
+	font-display: swap; 
+}
+
+a,
+button {
+	color: inherit;
+	text-decoration: underline;
+	box-shadow: none;
+	border: none;
+	appearance: none;
+	outline: none;
+	background: none; 
+	transition: $tsi;
+	text-decoration: none; 
+	cursor: pointer;
+
+	&:hover {
+		text-decoration: none;
+	}
+
+	&[href^="tel"] {
+		text-decoration: none;
+		cursor: pointer;
+	}
+}
+
+svg {
+	max-width: 100%; 
+	max-height: 100%; 
+}
+
+.h1,
+h1,
+.h2,
+h2,
+.h3,
+h3,
+.h4,
+h4,
+.h5,
+h5,
+.h6,
+h6 {
+	margin-bottom: calc(#{$line-height-base}em / 2);
+}
+
+h1[class]:not([class^="aos-"]):not([class^="section__title"]),
+h2[class]:not([class^="aos-"]):not([class^="section__title"]),
+h3[class]:not([class^="aos-"]):not([class^="section__title"]),
+h4[class]:not([class^="aos-"]):not([class^="section__title"]),
+h5[class]:not([class^="aos-"]):not([class^="section__title"]),
+h6[class]:not([class^="aos-"]):not([class^="section__title"]),
+h1:last-child,
+h2:last-child,
+h3:last-child,
+h4:last-child,
+h5:last-child,
+h6:last-child,
+p:last-child,
+ul:last-child,
+ol:last-child,
+dl:last-child,
+table:last-child,
+blockquote:last-child {
+	margin-bottom: 0;
+}
+
+p,
+ul,
+ol,
+dl,
+hr,
+table,
+blockquote {
+	margin-bottom: #{$line-height-base}em;
+}
+
+.h1,
+h1 {
+	font-family: $ff-gt; 
+	font-weight: 300; 
+	font-style: italic;
+	text-transform: uppercase; 
+	font-size: 12vw; 
+	line-height: 0.85; 
+
+	@include breakpoint-down(mobile) {
+		font-size: 18.67vw; 
+		line-height: 0.86; 
+	}
+}
+
+.h2,
+h2 {
+	margin-bottom: 3vw; 
+	font-family: $ff-gt; 
+	font-weight: 300; 
+	font-style: italic;
+	text-transform: uppercase; 
+	font-size: 6.67vw; 
+	line-height: 0.8; 
+
+	@include breakpoint-down(mobile) {
+		margin-bottom: 9.5vw; 
+		font-size: 16vw; 
+		line-height: 0.835; 
+	}
+}
+
+.h3,
+h3 {
+	font-weight: 600; 
+	text-transform: uppercase; 
+	letter-spacing: .148em;
+	font-size: 0.8vw; 
+	line-height: 1.85; 
+
+	@include breakpoint-down(mobile) {
+		font-size: 2.67vw; 
+	}
+}
+
+.h4,
+h4 {
+	margin-bottom: 1.87vw; 
+	font-weight: 200; 
+	text-transform: none; 
+	font-size: 2.34vw; 
+	line-height: 1.175; 
+
+	@include breakpoint-down(mobile) {
+		margin-bottom: 6.9vw; 
+		font-size: 9.33vw; 
+	}
+}
+
+.h5,
+h5 {
+	margin-bottom: 1.47vw; 
+	font-weight: 200; 
+	text-transform: none; 
+	font-size: 1.8vw; 
+	line-height: 1.26; 
+
+	@include breakpoint-down(mobile) {
+		margin-bottom: 6.67vw; 
+		font-size: 7.2vw; 
+	}
+}
+
+.h6,
+h6 {}
+
+p {
+	margin-bottom: 2.5vw; 
+	font-size: 1.07vw; 
+	line-height: 1.65;  
+
+	@include breakpoint-down(mobile) {
+		margin-bottom: 9vw; 
+		font-size: 4.27vw; 
+	}
+}

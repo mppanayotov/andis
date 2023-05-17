@@ -1,0 +1,135 @@
+/* ------------------------------------------------------------ *\
+	Button
+\* ------------------------------------------------------------ */
+
+.btn {
+	padding: 1.53vw 2vw;
+	border: none;
+	min-width: 11vw; 
+	background-color: #000; 
+	box-shadow: 0 0 0 1px #000 inset;
+	display: inline-block;
+	vertical-align: middle;
+	color: #fff; 
+	font-weight: 600; 
+	text-align: center;
+	text-transform: uppercase; 
+	line-height: 1.4; 
+	font-size: 0.67vw; 
+	letter-spacing: .142em;
+	cursor: pointer;
+	text-decoration: none;
+	appearance: none;
+	transition: $tsi;
+
+	@include breakpoint-down(mobile) {
+		padding: 6.13vw 8.27vw;
+		min-width: 44vw; 
+		font-size: 2.67vw; 
+	}
+
+	&:hover {
+		background-color: transparent; 
+		color: #000;
+	}
+}
+
+/*  btn--sm  */
+.btn--sm {
+	padding: 1.37vw 2vw; 
+
+	@include breakpoint-down(mobile) {
+		padding: 5.5vw 8.27vw;
+	}
+}
+
+/*  btn--xs  */
+.btn--xs {
+	padding: 1.37vw 2vw; 
+	min-width: 0; 
+
+	@include breakpoint-down(mobile) {
+		padding: 5.5vw 8.27vw;
+	}
+}
+
+/*  btn--white  */
+.btn--white {
+	background-color: #fff; 
+	box-shadow: 0 0 0 1px #fff inset;
+	color: #000; 
+
+	@include breakpoint-down(mobile) {
+		background-color: #000; 
+		box-shadow: 0 0 0 1px #000 inset;
+		color: #fff; 
+	}
+
+	&:hover {
+		background-color: #000;
+		color: #fff;
+
+		@include breakpoint-down(mobile) {
+			background-color: #fff; 
+			color: #000; 
+		}
+	}
+}
+
+/*  btn--outline  */
+.btn--outline {
+	background-color: transparent;
+	box-shadow: 0 0 0 1px #bbb inset;
+	color: #000; 
+
+	&:hover {
+		background-color: #000;
+		box-shadow: 0 0 0 1px #000 inset;
+		color: #fff;
+	}
+}
+
+/*  btn--outline-white  */
+.btn--outline-white {
+	background-color: transparent;
+	box-shadow: 0 0 0 1px #fff inset;
+	color: #fff; 
+
+	&:hover {
+		background-color: #fff;
+		box-shadow: 0 0 0 1px #fff inset;
+		color: #000;
+	}
+}
+
+/*  btn--outline-gray  */
+.btn--outline-gray {
+	background-color: transparent;
+	box-shadow: 0 0 0 1px #F2F0EC inset;
+	color: #EFECE8; 
+
+	&:hover {
+		background-color: #EFECE8;
+		box-shadow: 0 0 0 1px #F2F0EC inset;
+		color: #000;
+	}
+}
+
+/*  btn--hover-transparent-white  */
+.btn--hover-transparent-white {
+	&:hover {
+		background-color: transparent; 
+		color: #fff;
+		box-shadow: 0 0 0 1px #fff inset;
+	}
+}
+
+/*  btn--popup  */
+.btn--popup {
+	@include breakpoint-down(mobile) {
+		margin: auto;
+		width: auto; 
+		min-width: 62%;
+		max-width: 100%;
+	}
+}

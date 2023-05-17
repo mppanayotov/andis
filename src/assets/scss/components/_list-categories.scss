@@ -1,0 +1,74 @@
+/* ------------------------------------------------------------ *\
+	list-categories
+\* ------------------------------------------------------------ */
+
+.list-categories {
+	margin: 0 auto;
+	padding-bottom: 5.33vw; 
+	width: 100%; 
+	max-width: 42.67vw; 
+	list-style-type: none;
+	display: flex; 
+	flex-wrap: wrap;
+	justify-content: center;
+	line-height: 1.43; 
+	font-size: 0.93vw; 
+
+	@include breakpoint-down(mobile) {
+		padding-bottom: 21.33vw; 
+		max-width: 170.67vw; 
+		font-size: 3.73vw; 
+	}
+
+	li {
+		padding: 0.3vw 1.07vw;
+		flex: 0 1 auto;
+
+		@include breakpoint-down(mobile) {
+			padding: 1.2vw 4.27vw;
+		}
+	}
+
+	li:hover a:before,
+	li.is-active a:before {
+		opacity: 1; 
+		visibility: visible; 
+	}
+
+	a {
+		position: relative; 
+	}
+
+	a:before {
+		content: '';
+		position: absolute; 
+		bottom: 0; 
+		left: 0; 
+		width: 100%; 
+		height: 1px; 
+		background-color: #000;
+		opacity: 0; 
+		visibility: hidden; 
+		transition: $tsi;
+	}
+}
+
+/*  list-categories--alt  */
+.list-categories--alt {
+	padding: 0; 
+	max-width: none; 
+	flex-wrap: nowrap;
+	justify-content: normal;
+
+	li {
+		padding: 0.3vw 0;
+
+		@include breakpoint-down(mobile) {
+			padding: 1.2vw 0;
+		}
+	}
+
+	li + li {
+		margin-left: 2.14vw; 
+	}
+}

@@ -1,0 +1,45 @@
+/* ------------------------------------------------------------ *\
+	list-socials
+\* ------------------------------------------------------------ */
+
+.list-socials {
+	padding: 1vw 0 1.25vw; 
+	display: flex; 
+	align-items: center;
+	list-style-type: none;
+
+	@include breakpoint-down(mobile) {
+		padding: 4.7vw 0 5.6vw; 
+		justify-content: center;
+	}
+
+	> li:first-child {
+		padding-bottom: 0; 
+	}
+
+	> li + li {
+		margin-left: 1.2vw; 
+		margin-top: 0; 
+
+		@include breakpoint-down(mobile) {
+			margin-left: 4.8vw; 
+		}
+	}
+
+	> li > a {
+		display: block; 
+		font-size: 0; 
+	}
+
+	> li > a:hover {
+		opacity: .6; 
+	}
+
+	span {
+		font-size: 0; 
+	}
+
+	i {
+		display: block; 
+	}
+}

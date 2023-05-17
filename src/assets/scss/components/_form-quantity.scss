@@ -1,0 +1,142 @@
+/* ------------------------------------------------------------ *\
+	form-quantity
+\* ------------------------------------------------------------ */
+
+.form-quantity {
+	.form__controls {
+		position: relative; 
+		width: 4.06vw; 
+		flex: 0 0 auto;
+
+		@include breakpoint-down(mobile) {
+			width: 16.23vw; 
+		}
+	}
+
+	.form__increase,
+	.form__decrease {
+		position: absolute; 
+		top: 0; 
+		left: 0; 
+		border: none;
+		border-radius: 0;
+		width: 1.33vw; 
+		height: 100%; 
+		background: none;
+		box-shadow: none;
+		cursor: pointer;
+		appearance: none;
+		transition: $tsi;
+
+		@include breakpoint-down(mobile) {
+			width: 5.33vw; 
+		}
+	}
+
+	.form__increase:before,
+	.form__decrease:before {
+		content: '';
+		position: absolute; 
+		top: 50%; 
+		left: 50%; 
+		width: 25%; 
+		height: 1px; 
+		transform: translate(-50%, -50%); 
+		background-color: #000;
+	}
+
+	.form__increase:hover,
+	.form__decrease:hover {
+		opacity: .5; 
+
+		@include breakpoint-down(mobile) {
+			opacity: 1; 
+		}
+	}
+
+	.form__increase {
+		left: auto; 
+		right: 0; 
+	}
+
+	.form__increase:after {
+		content: '';
+		position: absolute; 
+		top: 50%; 
+		left: 50%; 
+		width: 25%; 
+		height: 1px; 
+		transform: translate(-50%, -50%) rotate(-90deg); 
+		background-color: #000;
+	}
+
+	.form__remove {
+		margin-left: 1.67vw; 
+		border: none;
+		border-radius: 0;
+		background: none;
+		box-shadow: none;
+		flex: 0 0 auto;
+		cursor: pointer;
+		appearance: none;
+		color: #999; 
+		text-transform: uppercase; 
+		font-weight: 600; 
+		font-size: 0.67vw; 
+		line-height: 1.4; 
+		letter-spacing: .091em;
+
+		@include breakpoint-down(mobile) {
+			margin-left: 5.33vw; 
+			font-size: 2.13vw; 
+			line-height: 1.5; 
+		}
+	}
+	
+	.form__remove:hover {
+		color: #000; 
+
+		@include breakpoint-down(mobile) {
+			color: #999; 
+		}
+	}
+
+	.form__row {
+		display: flex; 
+	}
+}
+
+/*  form-quantity--alt  */
+.form-quantity--alt {
+	.form__controls {
+		width: 5.07vw; 
+
+		@include breakpoint-down(mobile) {
+			width: 20.27vw; 
+		}
+	}
+
+	.form__controls--lg {
+		height: 3vw; 
+
+		@include breakpoint-down(mobile) {
+			margin-left: auto; 
+			margin-right: auto; 
+			height: 12vw; 
+		}
+	}
+
+	.form__field {
+		width: 100%; 
+		height: 100%; 
+	}
+
+	.form__add {
+		flex: 1 1 auto;
+		margin-left: 0.8vw; 
+
+		@include breakpoint-down(mobile) {
+			margin-left: 3.2vw; 
+		}
+	}
+}

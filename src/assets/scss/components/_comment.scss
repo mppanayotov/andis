@@ -1,0 +1,63 @@
+/* ------------------------------------------------------------ *\
+	comment
+\* ------------------------------------------------------------ */
+
+.comment {
+	text-align: left; 
+
+	h4 {
+		margin-bottom: 0.67vw; 
+		text-transform: none; 
+		font-weight: 300; 
+		font-size: 1.67vw; 
+		line-height: 1.36; 
+
+		@include breakpoint-down(mobile) {
+			margin-bottom: 2.67vw; 
+			font-size: 6.67vw; 
+		}
+	}
+
+	h5 {
+		margin-bottom: 2.67vw; 
+		text-transform: none; 
+		font-weight: 300; 
+		font-size: 0.8vw; 
+		line-height: 1.33; 
+
+		@include breakpoint-down(mobile) {
+			margin-bottom: 10.67vw; 
+			font-size: 3.2vw; 
+		}
+	}
+
+	h6 {
+		margin-bottom: 0.67vw; 
+		text-transform: none; 
+		font-weight: 300; 
+		font-size: 0.67vw;
+		line-height: 1.33; 
+
+		@include breakpoint-down(mobile) {
+			margin-bottom: 2.67vw; 
+			font-size: 2.67vw; 
+		}
+	}
+
+	p {
+		margin-bottom: 1.53vw; 
+		line-height: 1.45; 
+
+		@include breakpoint-down(mobile) {
+			margin-bottom: 6.13vw; 
+		}
+	}
+
+	p:last-child {
+		margin-bottom: 0; 
+	}
+
+	strong {
+		font-weight: 600; 
+	}
+}

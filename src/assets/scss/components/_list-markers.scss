@@ -1,0 +1,90 @@
+/* ------------------------------------------------------------ *\
+	List Markers
+\* ------------------------------------------------------------ */
+
+.list-markers {
+	border-bottom: 1px solid #bbb;
+	list-style: none; 
+	padding: 0 0 20px; 
+	max-height: 705px;
+	overflow-y: auto;
+
+	@include breakpoint-down(mobile) {
+		margin: 4px 0 0; 
+		padding: 0; 
+		border: none;
+	}
+
+	h6 {
+		margin: 0 0 20px; 
+		font-weight: 600; 
+		font-size: 1.1vw; 
+		font-size: 16px; 
+		letter-spacing: -0.013em;
+	}
+
+	p {
+		font-size: 0.93vw; 
+		font-size: 14px; 
+		line-height: 1.57; 
+		font-weight: 300;
+		margin: 0 0 20px; 
+		max-width: 152px;
+	}
+
+	a {
+		text-transform: uppercase; 
+		letter-spacing: 0.15em;
+		font-size: 0.67vw; 
+		font-size: 10px; 
+		text-decoration: underline;
+	}
+
+	h5 {
+		position: absolute; 
+		top: 26px; 
+		right: 2px;
+		text-align: right; 
+
+		img {
+			display: block;
+			margin: 0 auto; 
+		}
+
+		span {
+			font-size: 0.93vw; 
+			font-size: 14px; 
+			font-weight: 300;
+			display: block; 
+			padding-right: 5px;
+		}
+
+		.pin-icon {
+			display: block; 
+			margin: 0 0 12px; 
+		}
+	}
+
+
+	li {
+		position: relative; 
+		padding-top: 26px;
+		padding-right: 50px;
+		border-top: 1px solid #bbb;
+		margin-top: 24px; 
+
+		@include breakpoint-down(mobile) {
+			border-top: none;
+			border-bottom: 1px solid #bbb;
+			padding: 28px 50px 23px 0; 
+			margin: 0;
+
+		}
+	}
+
+	.is-hidden {
+		display: none;
+	}
+
+
+}

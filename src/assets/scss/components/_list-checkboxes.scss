@@ -1,0 +1,59 @@
+/* ------------------------------------------------------------ *\
+	List Checkboxes
+\* ------------------------------------------------------------ */
+
+.list-checkboxes {
+	list-style: none; 
+	margin: 0;
+	padding: 28px 0 4px; 
+
+	li {
+		display: inline-block;
+		vertical-align: middle;
+
+		@include breakpoint-down(small-desktop) {
+			display: block; 
+		}
+
+		+ li {
+			margin-left: 27px;
+
+			@include breakpoint-down(small-desktop) {
+				margin: 15px 0 0; 
+			}
+
+			@include breakpoint-down(mobile) {
+				margin: 25px 0 0; 
+			}
+		}
+	}
+
+	.checkbox {
+		min-height: 0; 
+
+		label {
+			font-size: .93vw; 
+			font-size: 14px;
+			font-weight: 300;
+			padding: 0 0 0 37px;
+
+			&:before {
+				width: 25px; 
+				height: 25px; 
+				margin-top: -4px;
+			}
+		}
+
+		&--pink {
+			input:checked + label:before {
+				background-color: #F04E5F;				
+			}
+		}
+
+		&--green {
+			input:checked + label:before {
+				background-color: #A2A468;
+			}
+		}
+	}
+}

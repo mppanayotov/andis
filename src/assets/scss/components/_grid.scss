@@ -1,0 +1,266 @@
+/* ------------------------------------------------------------ *\
+	grid
+\* ------------------------------------------------------------ */
+
+.grid {
+	margin-bottom: -2.6vw; 
+	width: 100%; 
+	flex: 1 1 auto;
+	display: flex; 
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	@include breakpoint-down(mobile) {
+		margin-bottom: -6.67vw; 
+	}
+
+	.grid__poster {
+		position: relative; 
+		display: block; 
+		flex: 1 1 auto;
+		background-size: cover;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+	}
+
+	.grid__item {
+		position: relative; 
+		padding-bottom: 2.6vw; 
+		width: 33.33%; 
+		max-width: 20.6vw; 
+		flex: 0 1 auto;
+		display: flex; 
+		flex-direction: column;
+
+		@include breakpoint-down(mobile) {
+			padding-bottom: 6.67vw; 
+			width: 50%; 
+			max-width: 38.67vw; 
+		}
+	}
+
+	.grid__item--lg {
+		width: 66.66%; 
+		max-width: 43.8vw; 
+
+		@include breakpoint-down(mobile) {
+			width: 50%; 
+			max-width: 38.67vw; 
+		}
+	}
+
+	.grid__item--alt {
+		@include breakpoint-down(mobile) {
+			width: 100%; 
+			max-width: none; 
+		}
+	}
+
+	.grid__row {
+		width: 100%; 
+		flex: 0 1 auto;
+		display: flex; 
+		justify-content: space-between;
+	}
+
+	.grid__col {
+		width: 33.33%; 
+		max-width: 20.6vw; 
+		flex: 0 1 auto;
+
+		@include breakpoint-down(mobile) {
+			width: 50%; 
+			max-width: 38.67vw; 
+		}
+	}
+
+	.grid__col .grid__item {
+		width: 100%; 
+		max-width: none; 
+	}
+
+	.grid__featured:before {
+		content: 'Featured';
+		position: absolute; 
+		top: 0.73vw; 
+		left: 0.87vw; 
+		padding: 0.367vw 0.5333vw; 
+		background-color: #000; 
+		color: #E0DDD9;
+		font-weight: 600; 
+		text-transform: uppercase; 
+		font-size: 0.6vw; 
+		line-height: 1.35;
+		letter-spacing: .165em;
+
+		@include breakpoint-down(mobile) {
+			top: 1.6vw; 
+			left: 1.6vw; 
+			padding: 1.068vw 2.0332vw; 
+			font-size: 1.87vw; 
+		}
+	}
+
+	.grid__card {
+		padding: 16.58% 19.24% 2vw;
+		flex: 0 0 auto;
+
+		@include breakpoint-down(mobile) {
+			padding: 24.9% 10.35% 4.64vw;
+		}
+	}
+
+	.grid__card p {
+		@include breakpoint-down(mobile) {
+			margin-bottom: 3.73vw; 
+			font-size: 3.2vw; 
+			letter-spacing: 0;
+		}
+	}
+
+	.grid__card figure {
+		@include breakpoint-down(mobile) {
+			padding: 0 10.85% 17.5%; 
+		}
+	}
+}
+
+/*  grid--alt  */
+.grid--alt {
+	.grid__poster {
+		height: 43.4vw; 
+
+		@include breakpoint-down(mobile) {
+			height: 173.6vw; 
+		}
+	}
+
+	.grid__item {
+		max-width: 27.73vw; 
+
+		@include breakpoint-down(mobile) {
+			width: 100%; 
+			max-width: none; 
+		}
+	}
+
+	.grid__item--no-image {
+		padding-top: 2.27vw; 
+
+		@include breakpoint-down(mobile) {
+			padding-top: 9.07vw; 
+		}
+	}
+
+	.grid__item--no-image .grid__image {
+		display: none; 
+	}
+
+	.grid__item--lg {
+		max-width: 59.2vw; 
+
+		@include breakpoint-down(mobile) {
+			max-width: none; 
+		}
+	}
+
+	.grid__fade:before {
+		content: '';
+		position: absolute; 
+		left: 0; 
+		bottom: 0; 
+		width: 100%; 
+		height: 100%; 
+		background: linear-gradient(-3deg, rgba(0,0,0,.6) 0%, rgba(0,0,0,0) 20vw);
+	}
+
+	.grid__location {
+		position: absolute; 
+		left: 2vw; 
+		bottom: 2vw; 
+		width: auto; 
+
+		@include breakpoint-down(mobile) {
+			left: 8vw; 
+			bottom: 8vw; 
+		}
+	}
+}
+
+/*  grid--spaced  */
+.grid--spaced {
+	margin-bottom: -4.67vw; 
+
+	@include breakpoint-down(mobile) {
+		margin-bottom: -18.67vw; 
+	}
+	
+	.grid__item {
+		padding-bottom: 4.67vw; 
+		
+		@include breakpoint-down(mobile) {
+			padding-bottom: 18.67vw; 
+		}
+	}
+}
+
+/*  grid--comments  */
+.grid--comments {
+	margin-left: auto; 
+	margin-right: auto; 
+	margin-bottom: -2.53vw; 
+	padding-top: 2vw; 
+	width: 78vw; 
+
+	@include breakpoint-down(mobile) {
+		margin-bottom: -10.13vw; 
+		padding-top: 0; 
+		width: 100%; 
+	}
+
+	.grid__item {
+		border: 1px solid transparent;
+		padding: 2vw 3.33vw; 
+		padding-bottom: 2.53vw; 
+		width: 33.33%; 
+		max-width: 28.4vw; 
+		display: block; 
+
+		@include breakpoint-down(mobile) {
+			padding: 8vw 0; 
+			padding-bottom: 10.13vw; 
+			width: 100%; 
+			max-width: none; 
+		}
+	}
+
+	.grid__item:nth-of-type(n + 4) {
+		border-top-color: #bbb;
+
+		@include breakpoint-down(mobile) {
+			border-color: transparent;
+		}
+	}
+
+	.grid__item:nth-of-type(3n+1) {
+		border-right-color: #bbb;
+
+		@include breakpoint-down(mobile) {
+			border-color: transparent;
+		}
+	}
+
+	.grid__item:nth-of-type(3n) {
+		border-left-color: #bbb;
+
+		@include breakpoint-down(mobile) {
+			border-color: transparent;
+		}
+	}
+
+	.grid__item + .grid__item {
+		@include breakpoint-down(mobile) {
+			border-top-color: #bbb;
+		}
+	}
+}

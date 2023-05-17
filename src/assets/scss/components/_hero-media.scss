@@ -1,0 +1,161 @@
+/* ------------------------------------------------------------ *\
+	hero-media
+\* ------------------------------------------------------------ */
+
+.hero-media {
+	position: relative; 
+	padding-bottom: 8vw; 
+	padding-top: 4vw; 
+
+	@include breakpoint-down(mobile) {
+		padding-top: 9.4vw;  
+		padding-bottom: 26.67vw; 
+		text-align: center; 
+	}
+
+	h1 {
+		margin-bottom: 3vw; 
+		width: 100%; 
+		flex: 0 0 auto;
+		font-size: 6.67vw; 
+
+		@include breakpoint-down(mobile) {
+			margin-bottom: 9.5vw; 
+			font-size: 18.67vw; 
+		}
+	}
+
+	p {
+		width: 100%; 
+		flex: 1 0 auto;
+	}
+
+	ul {
+		width: 100%; 
+		flex: 0 0 auto;
+	}
+
+	.hero__media {
+		position: relative; 
+		width: 57.33vw; 
+		flex: 0 0 auto;
+		order: 99;
+
+		@include breakpoint-down(mobile) {
+			margin-bottom: 13.34vw; 
+			width: 100%; 
+		}
+	}
+
+	.hero__shell {
+		display: flex; 
+		justify-content: space-between;
+		align-items: center;
+
+		@include breakpoint-down(mobile) {
+			display: block; 
+		}
+	}
+
+	.hero__breadcrumbs {
+		position: absolute; 
+		top: 1.33vw; 
+		left: 0; 
+		width: 100%; 
+
+		@include breakpoint-down(mobile) {
+			top: 0; 
+		}
+	}
+
+	.hero__content {
+		width: 100%; 
+		max-width: 25.73vw; 
+		min-height: 36vw; 
+		flex: 0 0 auto;
+		display: flex; 
+		flex-direction: column;
+
+		@include breakpoint-down(mobile) {
+			max-width: none; 
+			min-height: 0; 
+		}
+	}
+
+	.hero__footer {
+		margin-top: 1.13vw; 
+		border-top: 1px solid #BBB;
+		padding-top: 1vw; 
+		display: flex; 
+		align-items: center;
+
+		@include breakpoint-down(mobile) {
+			margin-top: 4.53vw; 
+			padding-top: 4vw; 
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	.hero__footer ul {
+		width: 100%; 
+		flex: 1 1 auto;
+
+		@include breakpoint-down(mobile) {
+			width: auto; 
+		}
+	}
+
+	.hero__footer ul {
+		margin-left: 2vw; 
+		padding-left: 2.07vw; 
+		border-left: 1px solid #bbb;
+
+		@include breakpoint-down(mobile) {
+			margin-left: 0; 
+			margin-top: 4vw; 
+			padding-left: 0; 
+			padding-top: 4.13vw; 
+			border-left: 0; 
+			border-top: 1px solid #bbb;
+		}
+	}
+	
+	.hero__btn {
+		flex: 0 1 auto;
+		min-width: 10.67vw; 
+
+		@include breakpoint-down(mobile) {
+			min-width: 0; 
+			width: 100%; 
+		}
+	}
+
+	.hero__btn + ul {
+		border-left: 0;
+		width: auto; 
+	}
+}
+
+/*  hero-media--reverse  */
+.hero-media--reverse {
+	.hero__media {
+		order: -1;
+		width: 55.13vw; 
+
+		@include breakpoint-down(mobile) {
+			width: 100%; 
+		}
+	}
+
+	.hero__content {
+		margin-right: auto; 
+		margin-left: 5.33vw; 
+		max-width: 26.67vw; 
+
+		@include breakpoint-down(mobile) {
+			margin: 0; 
+			max-width: none; 
+		}
+	}
+}

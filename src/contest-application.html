@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	<include src="head.html"></include>
+<body>
+	<div class="wrapper js-wrapper">
+		<include src="header.html"></include>
+		
+		<div class="wrapper-inner">
+			<div class="main">
+				<div class="main__breadcrumbs">
+					<ul class="list-breadcrumbs list-breadcrumbs--alt">
+						<li>
+							<a href="#">Customer spotlight</a>
+						</li>
+						
+						<li class="is-current">
+							<a href="#">contests</a>
+						</li>
+						
+						<li>
+							<a href="#">faq’s</a>
+						</li>
+					</ul><!-- /.list-breadcrumbs -->
+				</div><!-- /.main__breadcrumbs -->
+
+				<div class="section section--application">
+					<div class="shell shell--sm">
+						<h2>Enter the <br>contest</h2>
+
+						<div class="section__form">
+							<div class="form">
+								<form action="?" method="post">
+									<div class="form__body">
+										<div class="form__row">
+											<div class="form__col">
+												<div class="form__controls">
+													<label class="form__label" for="field-enter-name">Full name</label>
+												
+													<input type="text" class="field" id="field-enter-name" placeholder="Ex: John Smith">
+												</div><!-- /.form__controls -->
+											</div><!-- /.form__col -->
+											
+											<div class="form__col">
+												<div class="form__controls">
+													<label class="form__label" for="field-enter-email">Email</label>
+												
+													<input type="text" class="field" id="field-enter-email" placeholder="Ex: jonsmith@website.com">
+												</div><!-- /.form__controls -->
+											</div><!-- /.form__col -->
+										</div><!-- /.form__row -->
+							
+										<div class="form__controls">
+											<label class="form__label" for="area-enter-message">who are you?</label>
+							
+											<textarea class="textarea" id="area-enter-message" placeholder="Type here…."></textarea>
+										</div><!-- /.form__controls -->
+									</div><!-- /.form__body -->
+							
+									<div class="form__footer">
+										<button class="btn form__btn">Enter contest</button>
+									</div><!-- /.form__footer -->
+								</form>
+							</div><!-- /.form -->
+						</div><!-- /.section__form -->
+					</div><!-- /.shell -->
+				</div><!-- /.section -->
+
+				<div class="section">
+					<div class="section__article-poster">
+						<include src="article-poster-3.html"></include>
+					</div><!-- /.section__article-poster -->
+				</div><!-- /.section -->
+			</div><!-- /.main -->
+
+			<include src="footer.html"></include>
+		</div><!-- /.wrapper-inner -->
+
+		<div class="transition-overlay"></div><!-- /.transition-overlay -->
+
+		<div class="widget-load">
+			<i class="logo-small"></i>
+		</div><!-- /.widget-load -->
+	</div><!-- /.wrapper -->
+
+	<include src="scripts.html"></include>
+</body>
+</html>

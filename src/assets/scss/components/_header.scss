@@ -1,0 +1,265 @@
+/* ------------------------------------------------------------ *\
+	Header
+\* ------------------------------------------------------------ */
+
+.header {
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	width: 100%; 
+	height: $header-height; 
+	letter-spacing: .081em;
+	z-index: 100; 
+	background-color: #e9e6e1; 
+
+	@include breakpoint-down(mobile) {
+		height: $header-height-sm; 
+	}
+
+	.header__black {
+		display: none; 
+	}
+
+	.header__shell {
+		@include breakpoint-down(mobile) {
+			padding-left: $header-shell-gutter-sm; 
+			padding-right: $header-shell-gutter-sm; 
+		}
+	}
+
+	.header__access {
+		margin-left: auto; 
+	}
+
+	.header__bar {
+		position: relative; 
+		padding: 0.73vw 0 0.87vw; 
+		text-transform: uppercase; 
+		font-weight: 600; 
+		font-size: 0.6vw; 
+		line-height: 1.35; 
+
+		@include breakpoint-down(mobile) {
+			padding: 2.93vw 0; 
+			font-size: 2.67vw; 
+		}
+	}
+
+	.header__bar:before {
+		content: '';
+		position: absolute; 
+		bottom: 0; 
+		left: -50vw; 
+		right: -50vw; 
+		height: 1px; 
+		background-color: #bbb; 
+	}
+
+	.header__bar > ul {
+		display: flex; 
+		justify-content: space-between;
+		align-items: center;
+		list-style-type: none;
+	}
+
+	.header__bar > ul > li {
+		flex: 0 1 auto;
+		width: 33.33%; 
+
+		@include breakpoint-down(mobile) {
+			width: 100%; 
+		}
+	}
+
+	.header__bar > ul > li + li {
+		display: flex; 
+		justify-content: center;
+	}
+
+	.header__bar > ul > li:first-child,
+	.header__bar > ul > li:last-child {
+		@include breakpoint-down(mobile) {
+			display: none; 
+		}
+	}
+
+	.header__bar > ul > li > a:hover {
+		opacity: .5; 
+	}
+
+	.header__main {
+		position: relative; 
+		margin: 0 auto;
+		padding: 2vw 0;
+		min-height: 5.93vw; 
+		width: 100%; 
+		max-width: calc(100vw - #{$shell-gutter} * 2);
+		transform: translateY(0); 
+		display: flex; 
+		justify-content: space-between;
+		align-items: center;
+		list-style-type: none;
+		transition: transform .5s cubic-bezier(0.22, 0.61, 0.36, 1), visibility .5s, opacity .5s;
+
+		@include breakpoint-down(mobile) {
+			padding: 7.47vw 0;
+			max-width: calc(100vw - #{$header-shell-gutter-sm} * 2);
+		}
+	}
+
+	.header__main:before {
+		content: '';
+		position: absolute; 
+		bottom: 0; 
+		left: -50vw; 
+		right: -50vw; 
+		height: 100%; 
+		background-color: #E9E6E1;
+		border-bottom: 1px solid #bbb; 
+		pointer-events: none;
+		opacity: 0; 
+		transition: opacity .5s ease-out;
+	}
+
+	.header__nav {
+		width: 33.33%;
+		flex: 0 1 auto;
+
+		@include breakpoint-down(mobile) {
+			position: absolute; 
+			left: 0; 
+			bottom: 0; 
+			width: 100%; 
+		}
+	}
+
+	.header__logo,
+	.header__utilities {
+		flex: 0 1 auto;
+		width: 33.33%;
+
+		@include breakpoint-down(mobile) {
+			width: auto;
+		}
+	}
+
+	.header__logo {
+		display: flex; 
+		justify-content: center;
+		transform-style: preserve-3d;
+	}
+}
+
+/*  header--black  */
+.header--black {
+	color: #E9E6E1;
+	background-color: #000; 
+
+	.header__bar:before {
+		background-color: #555; 
+	}
+
+	.header__default {
+		display: none; 
+	}
+
+	.header__black {
+		display: block; 
+	}
+
+	.header__btn {
+		color: #E9E6E1; 
+	}
+
+	.header__btn.is-active {
+		color: #000;  
+	}
+
+	.header__main:before {
+		background-color: #000; 
+		border-bottom: none;
+	}
+}
+
+/*  open menu state  */
+.header.has-open-menu {
+	.nav-utilities > ul > li {
+		@include breakpoint-down(mobile) {
+			opacity: 0; 
+			visibility: hidden; 
+			pointer-events: none;
+		}
+	}
+
+	.nav-utilities > ul > li:last-child {
+		@include breakpoint-down(mobile) {
+			opacity: 1; 
+			visibility: visible; 
+			pointer-events: auto;
+		}
+	}
+}
+
+/*  open search state  */
+.header.has-open-search {
+	.header__main:before {
+		opacity: 1; 
+	}
+}
+
+/*  fixed state  */
+.header.is-fixed {
+	.header__main {
+		position: fixed; 
+		top: 0; 
+		left: 0; 
+		right: 0; 
+		padding: 2.6vw 0 1.7vw;
+		transform: translateY(-0.6vw); 
+
+		@include breakpoint-down(mobile) {
+			padding: 7.47vw 0;
+			transform: translateY(0); 
+		}
+	}
+
+	.header__main:before {
+		opacity: 1; 
+	}
+
+	.logo {
+		transform: scale(0.9714285714285714);
+
+		@include breakpoint-down(mobile) {
+			transform: scale(1); 
+		}
+	}
+}
+
+
+/*  covert state  */
+.header.is-covert {
+	.header__main {
+		transform: translateY(-100%); 
+		visibility: hidden; 
+		opacity: 0; 
+		pointer-events: none;
+
+		@include breakpoint-down(mobile) {
+			transform: none; 
+			visibility: visible; 
+			opacity: 1; 
+			pointer-events: auto;
+		}
+	}
+}
+
+/*  hidden state  */
+.header.is-hidden {
+	.header__main {
+		transform: translateY(-100%); 
+		visibility: hidden; 
+		opacity: 0; 
+		pointer-events: none;
+	}
+}
