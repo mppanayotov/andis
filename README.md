@@ -1,6 +1,6 @@
 # Live Demo
 
-https://mppanayotov-andis.surge.sh/
+https://mppanayotov-andis.surge.sh
 
 # Task Runner
 
